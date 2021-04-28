@@ -1,0 +1,26 @@
+{
+  "name": "momentous",
+  "version": "1.0.0",
+  "description": "momenteus, an event management app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdxbellasaurus/momentous.git"
+  },
+  "keywords": [
+    "momenteus",
+    "momentUs",
+    "event",
+    "management"
+  ],
+  "author": "pdxbellasaurus, bnemeton, HGreedo and Carson133",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pdxbellasaurus/momentous/issues"
+  },
+  "homepage": "https://github.com/pdxbellasaurus/momentous#readme"
+}
