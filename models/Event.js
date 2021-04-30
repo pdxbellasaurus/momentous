@@ -12,6 +12,10 @@ Event.init(
       autoIncrement: true,
     },
    //ADD DATATYPES TO CAPTURE FOR EVENTS AND REFERENCE TO USER
+   name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   },
   {
     sequelize,
