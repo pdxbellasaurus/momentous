@@ -1,8 +1,8 @@
 const User = require('./User');
-const Event = require('./Post');
+const Event = require('./Event');
 
 // DEFINE USER RELATIONSHIPS
 
 // DEFINE EVENT RELATIONSHIPS
 
-module.exports = { User, Post };
+module.exports = { User, Event };
