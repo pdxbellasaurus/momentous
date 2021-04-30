@@ -1,0 +1,12 @@
+<h2>{{event.name}}</h2>
+<p>{{event.desc}}</p>
+{{#if loggedIn}}
+<ol>
+    {{#each event.guests as |guest|}}
+    <li>
+        <h4>{{guest.name}}</h4>
+        <p>{{guest.comment}}</p>
+    </li>
+    {{/each}}
+</ol>
+{{/if}}

@@ -1,4 +1,11 @@
-<!-- Loop over each object in the events array -->
-{{#each events as |event| }}
-
-{{/each}}
+<ul>
+    <!-- Loop over each object in the events array -->
+    {{#each events as |event| }}
+    <li>
+        <h3>
+            <a href="/event/{{event.id}}">{{event.name}}</a>
+        </h3>
+        <p>{{event.desc}}</p>
+    </li>
+    {{/each}}
+</ul>

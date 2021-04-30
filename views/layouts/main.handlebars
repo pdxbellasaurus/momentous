@@ -4,13 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>*****TITLE HERE*********</title>
+  <title>Momentous</title>
   <link rel="stylesheet" href="">
 
 </head>
 
 <body>
- 
+  <header>
+    <nav>
+      <a href="/">home</a>
+      {{#if loggedIn}}
+      <a href="/logout">log out</a>
+      <a href="/myevents">my events</a>
+      {{else}}
+      <a href="/login">log in</a>
+      {{/if}}
+    </nav>
+  </header>
+  {{{body}}}
 </body>
 
 </html>
