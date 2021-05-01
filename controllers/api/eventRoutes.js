@@ -14,4 +14,25 @@ router.post('/', async (req, res) => {
     }
   });
 
+// PUT route for event
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedEvent = await Event.update({
+      // add what they can change/what can be updated
+    })
+
+  } catch (err) {
+    res.status(400).json(err)
+  }
+})
+
+//DELETE route for event
+router.delete('/:id', async (req, res) => {
+  try {
+    
+  } catch (err) {
+    res.status(400).json(err)
+  }
+})
+
 module.exports = router;

@@ -16,6 +16,21 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+// PUT route for user
+router.put('/:id', async (req, res) => {
+  try {
+    const newUser = await User.update({
+      // add what they can change/what can be updated
+    })
+
+  } catch (err) {
+    res.status(400).json(err)
+  }
+})
+
+
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -57,5 +72,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 
 module.exports = router;

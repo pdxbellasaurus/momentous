@@ -28,8 +28,7 @@ router.get('/event/:id', async (req, res) => {
       const eventData = await Event.findByPk(req.params.id, {
         include: [
           {
-            model: Event,
-            attributes: ['name'],
+            model: Event
           },
         ],
       });
@@ -44,5 +43,28 @@ router.get('/event/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+
+  router.get('/user/:id', async (req, res) => {
+    try {
+      const userData = await User.findByPk(req.params.id, {
+        include: [
+          {
+            model: User
+          },
+        ],
+      });
+  
+      const user = userData.get({ plain: true });
+  
+      res.render('user', {
+        ...user,
+      
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 module.exports = router;
