@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 // PUT route for user
 router.put('/:id', async (req, res) => {
   try {
-    const newUser = await User.update({
+    const updateUser = await User.update({
       // add what they can change/what can be updated
     })
 
@@ -29,15 +29,13 @@ router.put('/:id', async (req, res) => {
   }
 })
 
-
-
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
-        .status(400)
+        .status(530)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
@@ -46,7 +44,7 @@ router.post('/login', async (req, res) => {
 
     if (!validPassword) {
       res
-        .status(400)
+        .status(530)
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
@@ -72,6 +70,5 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
-
 
 module.exports = router;

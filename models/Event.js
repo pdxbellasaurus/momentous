@@ -11,11 +11,32 @@ Event.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    unique_id: {
+    type: DataTypes.STRING,
+    allowNull: false
+    },
    //ADD DATATYPES TO CAPTURE FOR EVENTS AND REFERENCE TO USER
    name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  
+/*
+description - text
+venue
+Type
+address
+city
+state
+zip
+*/
+user_id: {
+  type: DataTypes.INTEGER,
+  references: {
+    model: 'user',
+    key: 'id',
+  },
+},
   },
   {
     sequelize,
