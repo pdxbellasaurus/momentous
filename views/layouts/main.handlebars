@@ -15,10 +15,10 @@
     <nav>
       <a href="/">home</a>
       {{#if loggedIn}}
-      <a href="/logout">log out</a>
-      <a href="/events">my events</a>
+      <a href="/logout" id='logout'>log out</a>
+      <a href="/myevents">my events</a>
       {{else}}
-      <a href="/login">log in</a>
+      <a href="/login" id='login'>log in</a>
       {{/if}}
     </nav>
   </header>
