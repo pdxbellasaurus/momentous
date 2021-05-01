@@ -23,15 +23,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/event/:id', async (req, res) => {
+router.get('/event/:unique_id', async (req, res) => {
     try {
-      const eventData = await Event.findByPk(req.params.id, {
-        include: [
-          {
-            model: Event
-          },
-        ],
-      });
+      const eventData = await Event.findOne({ where: { id: req.body.id }}
+       );
   
       const event = eventData.get({ plain: true });
   

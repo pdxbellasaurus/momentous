@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
   });
 
 // PUT route for event
-router.put('/:id', async (req, res) => {
+router.put('/:unique_id', async (req, res) => {
   try {
     const updatedEvent = await Event.update({
       // add what they can change/what can be updated
@@ -27,9 +27,11 @@ router.put('/:id', async (req, res) => {
 })
 
 //DELETE route for event
-router.delete('/:id', async (req, res) => {
+router.delete('/:unique_id', async (req, res) => {
   try {
-    
+    const deleteEvent = await Event.destroy({
+      //FINISH ME
+    })
   } catch (err) {
     res.status(400).json(err)
   }
