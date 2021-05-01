@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Momentous</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
   <link rel="stylesheet" href="">
 
 </head>
@@ -14,10 +15,10 @@
     <nav>
       <a href="/">home</a>
       {{#if loggedIn}}
-      <a href="/logout">log out</a>
-      <a href="/events">my events</a>
+      <a href="/logout" id='logout'>log out</a>
+      <a href="/myevents">my events</a>
       {{else}}
-      <a href="/login">log in</a>
+      <a href="/login" id='login'>log in</a>
       {{/if}}
     </nav>
   </header>
