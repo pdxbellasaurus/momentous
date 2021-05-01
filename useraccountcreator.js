@@ -22,6 +22,7 @@ openAccountCreator.addEventListener("click", function (){
     //create email element
     const email = document.createElement("input");
     
+    //set the attributes here
     email.setAttribute("type", "text");
     email.setAttribute("placeholder", "Please enter your email");
     body.appendChild(email)
