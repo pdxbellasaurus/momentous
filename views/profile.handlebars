@@ -1,0 +1,17 @@
+<h3>{{user.name}}</h3>
+
+<h4>email: {{user.email}}</h4>
+
+{{#if loggedIn}}
+<h3>events:</h3>
+<ul>
+    {{#each events as |event|}}
+    <li>
+        <h3><a href="/event/{{event.id}}">{{event.name}}</a></h3>
+        <p>{{event.description}}</p>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<a href="/login">Please log in.</a>
+{{/if}}
