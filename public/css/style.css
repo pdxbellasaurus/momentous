@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fffbdf;
+  height: 100%;
+}
+
+.navlink {
+  border-radius: 7px;
+  color: #fffbdf;
+  margin-right: 20px;
+}
+
+.navlink:hover {
+  background-color: #c6ffc1;
+}
+
+nav {
+  background-color: #34656d;
+  color: #334443;
+  margin-bottom: 30px;
+}
