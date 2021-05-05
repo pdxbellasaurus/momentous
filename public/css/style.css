@@ -7,18 +7,17 @@ body {
   height: 100%;
 }
 
-.navlink {
+nav {
+  background-color: #34656d;
+  color: #334443;
+  margin-bottom: 30px;
+}
+nav a {
   border-radius: 7px;
   color: #fffbdf;
   margin-right: 20px;
 }
 
-.navlink:hover {
+nav a:hover {
   background-color: #c6ffc1;
-}
-
-nav {
-  background-color: #34656d;
-  color: #334443;
-  margin-bottom: 30px;
 }
