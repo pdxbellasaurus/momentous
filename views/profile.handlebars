@@ -7,7 +7,7 @@
 <ul>
     {{#each events as |event|}}
     <li>
-        <h3><a href="/event/{{event.id}}">{{event.name}}</a></h3>
+        <h3><a href="/event/{{event.unique_id}}">{{event.name}}</a></h3>
         <p>{{event.description}}</p>
     </li>
     {{/each}}
