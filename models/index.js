@@ -18,4 +18,8 @@ Guest.belongsTo(Event,{
     foreignKey: 'event_id'
 })
 
+Event.hasMany(Guest,{
+    foreignKey: 'guest_id'
+})
+
 module.exports = { User, Event, Guest };
