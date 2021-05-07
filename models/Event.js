@@ -58,13 +58,6 @@ user_id: {
     key: 'id',
   },
 },
-guest_id: {
-  type: DataTypes.INTEGER,
-  references: {
-    model: 'guest',
-    key: 'id',
-  },
-},
   },
   {
     sequelize,
