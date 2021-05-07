@@ -1,11 +1,15 @@
 const router = require('express').Router();
+const { nanoid } = require('nanoid');
 const { Event } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+  const unique_id = nanoid(10);
+  console.log(unique_id);
     try {
       const newEvent = await Event.create({
         ...req.body,
+        unique_id: unique_id,
         user_id: req.session.user_id,
       });
   

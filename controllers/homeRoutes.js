@@ -27,13 +27,16 @@ router.get('/', async (req, res) => {
 
 router.get('/event/:unique_id', async (req, res) => {
     try {
-      const eventData = await Event.findOne({ where: { id: req.body.id }}
+      const eventData = await Event.findOne({ where: { unique_id: req.params.unique_id }}
        );
   
       const event = eventData.get({ plain: true });
+
+      // console.log(event)
   
       res.render('event', {
-        ...event,
+        event: event,
+        logged_in: req.session.logged_in
       
       });
     } catch (err) {
