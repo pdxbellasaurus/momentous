@@ -16,11 +16,30 @@ Event.init(
     allowNull: false
     },
    //ADD DATATYPES TO CAPTURE FOR EVENTS AND REFERENCE TO USER
-   name: {
+   title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  
+  description: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  start_date: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  start_time: {
+    type: DataTypes.TIME,
+    allowNull: true,
+  },
+  end_date: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  end_time: {
+    type: DataTypes.TIME,
+    allowNull: true,
+  },
 /*
 description - text
 venue
@@ -29,6 +48,8 @@ address
 city
 state
 zip
+event start
+event end
 */
 user_id: {
   type: DataTypes.INTEGER,
