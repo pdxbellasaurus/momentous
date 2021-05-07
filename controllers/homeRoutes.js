@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 
     res.render('homepage', { 
       events, 
-     
+     logged_in: req.session.logged_in
+
     });
   } catch (err) {
     res.status(500).json(err);
@@ -70,8 +71,8 @@ router.get('/event/:unique_id', async (req, res) => {
       const user = userData.get({ plain: true });
   
       res.render('profile', {
-        ...user,
-        logged_in: true
+        user: user,
+        logged_in: req.session.logged_in
       });
     } catch (err) {
       res.status(500).json(err);
@@ -89,7 +90,7 @@ router.get('/event/:unique_id', async (req, res) => {
 
   router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
-      res.redirect('/signup');
+      res.redirect('/profile');
       return;
     }
   

@@ -15,8 +15,8 @@
     <nav>
       <a href="/">home</a>
       {{#if logged_in}}
-      <a href="/logout" id='logout'>log out</a>
-      <a href="/myevents">my events</a>
+      <a href='#' id='logout'>log out</a>
+      <a href="/profile">profile</a>
       {{else}}
       <a href="/login" id='login'>log in</a>
       <a href="/signup" id='signup'>sign up</a>
@@ -24,6 +24,10 @@
     </nav>
   </header>
   {{{body}}}
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
