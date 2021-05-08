@@ -72,7 +72,7 @@ router.get('/event/:unique_id', async (req, res) => {
       });
   
       const user = userData.get({ plain: true });
-      console.log(user)
+      // console.log(user)
   
       res.render('profile', {
         user: user,
