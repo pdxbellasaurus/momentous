@@ -1,10 +1,75 @@
-<form id="signup-form">
+{{!-- <form id="signup-form">
     <input type="text" name="name" id="name-signup" class="signup-form-field" placeholder="name">
     <input type="text" name="username" id="username-signup" class="signup-form-field" placeholder="username">
     <input type="text" name="email" id="email-signup" class="signup-form-field" placeholder="email">
     <input type="password" name="password" id="password-signup" class="signup-form-field" placeholder="password">
     <button type="submit" value="login" id="signup-form-submit">Login</button>
-</form>
+</form> --}}
 
+
+{{!--
+=========================== --}}
+<section class="hero is-info is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <h3 class="title ">Signup</h3>
+                <hr>
+                <p class="subtitle">Please signup to proceed.</p>
+                <div class="box">
+                    <img src="https://user-images.githubusercontent.com/74746211/117521730-20fd6580-af64-11eb-9522-6c4a865877c4.png"
+                        width="196" height="128">
+                    </figure>
+
+                    <form id="signup-form">
+
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input type="text" name="name" id="name-signup" class="signup-form-field"
+                                    placeholder="Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input type="text" name="username" id="username-signup" class="signup-form-field"
+                                    placeholder="Username">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input type="text" name="email" id="email-signup" class="signup-form-field"
+                                    placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input type="password" name="password" id="password-signup" class="signup-form-field"
+                                    placeholder="Password">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <button type="submit" value="login" id="signup-form-submit"
+                            class="button is-block is-link is-fullwidth">
+                            Signup
+                            <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+</section>
 
 <script src="/js/signup.js"></script>

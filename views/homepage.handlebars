@@ -1,11 +1,51 @@
-<ul>
-    <!-- Loop over each object in the events array -->
-    {{#each events as |event| }}
-    <li>
-        <h3>
-            <a href="/event/{{event.id}}">{{event.name}}</a>
-        </h3>
-        <p>{{event.description}}</p>
-    </li>
-    {{/each}}
-</ul>
+{{!-- <ul>
+  <!-- Loop over each object in the events array -->
+  {{#each events as |event| }}
+  <li>
+    <h3>
+      <a href="/event/{{event.id}}">{{event.name}}</a>
+    </h3>
+    <p>{{event.description}}</p>
+  </li>
+  {{/each}}
+</ul> --}}
+
+{{!-- ===================================== --}}
+<section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Momentous
+    </p>
+    <p class="subtitle">
+      EVENTS
+    </p>
+  </div>
+</section>
+
+<section class="columns is-multiline has-background-link">
+
+  {{#each events as |event| }}
+
+  <div class="card column is-4">
+    <div class="card-content">
+      <div class="media">
+
+        <div class="media-content">
+          <p>
+            <a href="/event/{{event.unique_id}}" class="title is-4">{{event.title}}</a>
+          </p>
+          <p class="subtitle is-6">
+            Hosted by {{user.name}}
+          </p>
+        </div>
+      </div>
+
+      <div class="content">
+        {{event.description}}
+      </div>
+    </div>
+  </div>
+
+  {{/each}}
+
+</section>

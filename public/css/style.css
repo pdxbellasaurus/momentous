@@ -1,23 +1,2 @@
-html {
-  height: 100%;
-}
-
-body {
-  background-color: #fffbdf;
-  height: 100%;
-}
-
-nav {
-  background-color: #34656d;
-  color: #334443;
-  margin-bottom: 30px;
-}
-nav a {
-  border-radius: 7px;
-  color: #fffbdf;
-  margin-right: 20px;
-}
-
-nav a:hover {
-  background-color: #c6ffc1;
-}
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+/* @import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.css.map" */

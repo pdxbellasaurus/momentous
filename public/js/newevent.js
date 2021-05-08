@@ -21,5 +21,5 @@ const neweventFormHandler = async (event) => {
   };
 
   document
-  .querySelector('#newevent-form')
+  .getElementById('newevent-form')
   .addEventListener('submit', neweventFormHandler);

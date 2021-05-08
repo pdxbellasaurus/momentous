@@ -1,7 +1,27 @@
-<form id='newevent-form'>
-    <input type='text' id='title-newevent'>
-    <textarea id='description-newevent'></textarea>
-    <button id='submit'>submit</button>
-</form>
+<section class="hero is-link is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-10 is-offset-2">
 
-<script src='/js/newevent.js'
+                <div class="box">
+                   <figure class="logo">
+                        <img src="https://user-images.githubusercontent.com/74746211/117521730-20fd6580-af64-11eb-9522-6c4a865877c4.png" width="228" height="196">
+                    </figure>
+                    <p class='has-text-centered is-size-4 as-text-weight-semibold block'>EVENTS</p>
+                    <hr>
+                    <h5 class="title has-text-black">Add a new event</h5>
+                    <form id="newevent-form">
+                        <div class="field">
+                            <input class="input" type="text" placeholder="Title" id="title-newevent">
+                        </div>
+                        <div class="field">
+                            <textarea class="textarea" placeholder="Event description" id="description-newevent"></textarea>
+                        </div>
+                        <button class="button is-block is-info is-fullwidth" id="submit">
+                            Submit Event 
+                            </button>
+                    </form>
+                </div>
+            </div>
+</section>
+<script src='/js/newevent.js'></script>

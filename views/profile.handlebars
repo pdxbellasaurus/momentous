@@ -1,4 +1,4 @@
-<h3>{{user.name}}</h3>
+{{!-- <h3>{{user.name}}</h3>
 
 <h4>email: {{user.email}}</h4>
 
@@ -14,4 +14,46 @@
 </ul>
 {{else}}
 <a href="/login">Please log in.</a>
-{{/if}}
+{{/if}} --}}
+
+{{!-- ================================================================== --}}
+<section class="container mt-5">
+    <div class="columns">
+        <div class="column is-4">
+            <aside class="menu">
+                <ul class="list">
+                    <li class="subtitle is-3">Welcome <strong>{{user.name}}</strong></li>
+                    <li class="box">
+                        {{user.email}}
+                    </li>
+                </ul>
+            </aside>
+            <a class="button is-link is-block is-alt is-medium" href="/newevent">New Event</a>
+        </div>
+        <div class="column is-9">
+            <div class="box content">
+                {{#if logged_in}}
+                <h3 class="has-text-link">Events:</h3>
+                {{#each events as |event|}}
+                <article class="">
+                    <a href="/event/{{events.unique_id}}">
+                        <h4>{{events.title}}</h4>
+                    </a>
+                    <div class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    {{events.description}}
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                </article>
+                {{/each}}
+                {{else}}
+                <a href="/login">Please log in.</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
