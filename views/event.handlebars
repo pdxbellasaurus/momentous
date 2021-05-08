@@ -1,29 +1,15 @@
-{{!-- <h2>{{event.title}}</h2>
-<p>{{event.description}}</p>
-{{#if logged_in}}
-<ol>
-    {{#each event.guests as |guest|}}
-    <li>
-        <h4>{{guest.name}}</h4>
-        <p>{{guest.comment}}</p>
-    </li>
-    {{/each}}
-</ol>
-{{/if}} --}}
-{{!-- ============================ --}}
-
 <section class="hero is-warning is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
-            <div class="column is-4 is-offset-4">
+            <div class="column is-6 is-offset-4">
                 <h3 class="title">{{event.title}}</h3>
                                <div class="box">
-                    <figure class="logo">
+                    {{!-- <figure class="logo">
                         <img alt="Momentous logo"
                             src="https://user-images.githubusercontent.com/74746211/117521730-20fd6580-af64-11eb-9522-6c4a865877c4.png"
                             width="196" height="128">
-                    </figure>
-                    <p>
+                    </figure> --}}
+                    <p class="is-size-5">
                         {{event.description}}
                     </p>
 <hr>
