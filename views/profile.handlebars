@@ -15,16 +15,16 @@
             <div class="box content">
                 {{#if logged_in}}
                 <h3 class="has-text-link">Events:</h3>
-                {{#each events as |event|}}
+                {{#each user.events as |event|}}
                 <article class="">
-                    <a href="/event/{{events.unique_id}}">
-                        <h4>{{events.title}}</h4>
+                    <a href="/event/{{event.unique_id}}">
+                        <h4>{{event.title}}</h4>
                     </a>
                     <div class="media">
                         <div class="media-content">
                             <div class="content">
                                 <p>
-                                    {{events.description}}
+                                    {{event.description}}
                                 </p>
                             </div>
                         </div>
