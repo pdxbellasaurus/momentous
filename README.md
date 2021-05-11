@@ -32,7 +32,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/pdxbellasaurus/momentous">
+  <a href="https://momentous-events.herokuapp.com/">
     <img src="https://user-images.githubusercontent.com/74746211/117521730-20fd6580-af64-11eb-9522-6c4a865877c4.png" alt="Logo">
   </a>
 
